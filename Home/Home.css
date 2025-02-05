@@ -1,0 +1,127 @@
+                                /* Logo */
+
+.Logo {
+    width: 150px;
+    height: 150px;
+    display: block;
+    margin: 0 auto;
+}
+/*Start of Main Content div*/
+/* Basic styles for main-content div */
+.main-content {
+    display: block;  /* Block-level element */
+    margin: 0;
+    padding: 0;
+    font-family: 'Source Sans Pro', Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    box-sizing: border-box; /* Ensures padding/borders don't affect width/height */
+    -webkit-font-smoothing: antialiased; /* Smoothing for Webkit-based browsers */
+    -ms-text-size-adjust: 100%; /* Ensures proper font sizing in IE */
+    -webkit-text-size-adjust: 100%; /* Same for Webkit browsers */
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0); /* Prevents tap highlight in mobile browsers */
+}
+
+/* Media Queries for responsiveness at 768px width */
+@media (min-width: 768px) {
+    .main-content .c1-1o {
+        margin-left: -24px;
+    }
+    .main-content .c1-1n {
+        margin-bottom: 0;
+    }
+    .MainContent .c1-1m {
+        margin-right: -24px;
+    }
+    .main-content .c1-1l {
+        margin-top: 0;
+    }
+    .main-content .c1-d {
+        font-size: 16px;
+    }
+}
+
+/* Flexbox layout properties for centering content */
+.main-content .c1-5o {
+    text-align: center;
+}
+.main-content .c1-2r {
+    justify-content: center;
+}
+.main-content .c1-1h {
+    align-items: center;
+}
+
+/* Adjusting margin for specific children */
+.main-content .c1-1g {
+    margin-left: -12px;
+}
+.main-content .c1-1f {
+    margin-bottom: 0;
+}
+.main-content .c1-1e {
+    margin-right: -12px;
+}
+.main-content .c1-1d {
+    margin-top: 0;
+}
+
+/* Flexbox direction and wrapping properties */
+.main-content .c1-1c {
+    flex-wrap: wrap;
+}
+.main-content .c1-1b {
+    flex-direction: row;
+}
+
+.main-content .c1-19 {
+    display: flex;
+}
+
+/* Font style and text properties */
+.main-content .c1-c {
+    font-size: 16px;
+}
+.main-content .c1-b {
+    font-family: 'Source Sans Pro', Arial, sans-serif;
+}
+.main-content .c1-2 {
+    text-transform: none;
+}
+.main-content .c1-1 {
+    letter-spacing: normal;
+}
+
+/* Ensure box-sizing is inherited in all child elements */
+.main-content *, .main-content :after, .main-content :before {
+    box-sizing: inherit;
+}
+
+
+.main-text {
+    text-align: center;
+}
+
+/* Background-image */
+.Background-image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;  /* Makes it responsive */
+    height: auto; /* Maintains aspect ratio */
+    border-left-width: 8px;
+    border-right-width: 8px;
+    border-bottom-width: 8px;
+    border-top-width: 8px;
+    border-style: solid;
+    border-color: rgb(186, 135, 114);
+    aspect-ratio: 1.3333333333333333 / 1; /* Keeps the aspect ratio */
+}
+
+/* Responsive font-size inside container at 768px */
+@media (min-width: 768px) {
+    .Background-image {
+        font-size: 16px; /* If needed, adjust font-size of content inside the image */
+    }
+}
+

@@ -1,0 +1,59 @@
+.Logo {
+    width: 150px;
+    height: 150px;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Add a black background color to the top navigation */
+/* Style the navbar items container to be centered */
+.navbar-nav {
+    display: flex;
+    justify-content: center; /* Center items horizontally */
+    width: 100%; /* Make sure navbar takes the full width */
+}
+
+/* Style the links inside the navigation bar */
+.topNav a {
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    font-family: 'Cinzel', serif;
+}
+
+/* Change the color of links on hover */
+.topNav a:hover {
+    color: #BA8772; /* Brown color on hover */
+}
+
+/* Active link styling */
+.topNav .nav-link.active, .dropdown-item.active {
+    color: #BA8772; /* Brown color when active */
+}
+
+/* Ensure dropdown menu is positioned correctly */
+.topNav .dropdown-menu {
+    z-index: 1000; /* Ensure dropdown is above other elements */
+    background-color: #222 !important; /* Dark background for dropdown */
+    position: absolute; /* Ensure dropdown is positioned correctly */
+}
+
+/* Ensure dropdown items are styled correctly */
+.topNav .dropdown-item {
+    color: white; /* Ensuring dropdown items start as white */
+}
+
+.topNav .dropdown-item:hover {
+    color: #BA8772; /* Brown color on hover */
+}
+
+/* Center the dropdown menu on mobile view */
+@media (max-width: 768px) {
+    .topNav .dropdown-menu {
+        left: 50%;
+        transform: translateX(-50%);
+        right: auto; /* Make sure right is not influencing the position */
+    }
+}

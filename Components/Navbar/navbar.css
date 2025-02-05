@@ -1,0 +1,96 @@
+.topNav {
+    position: relative;
+    z-index: 1000; /* Ensure navbar is above other elements */
+}
+
+.topNav a {
+    text-decoration: none;
+    font-size: 17px;
+    font-family: 'Cinzel', serif;
+    color: white; /* Ensuring all links start as white */
+}
+
+/* Change the color of links on hover */
+.topNav a:hover {
+    color: #BA8772; /* Brown color on hover */
+}
+
+/* Active link styling */
+.topNav .nav-link.active {
+    color: #BA8772; /* Brown color when active */
+}
+
+/* ---- Dropdown Styles ---- */
+
+/* Change the background of the dropdown menu */
+.topNav .dropdown-menu {
+    background-color: #212529 !important; /* Dark background */
+    border-radius: 8px; /* Smooth corners */
+    border: 1px solid #444; /* Adds contrast */
+    min-width: 200px; /* Ensures visibility */
+    z-index: 1050; /* Ensures it stays on top */
+}
+
+/* Change text color so it's visible */
+.topNav .dropdown-menu .dropdown-item {
+    color: white !important; /* White text for visibility */
+    font-size: 16px;
+    padding: 10px 15px;
+}
+
+/* Hover effect for dropdown items */
+.topNav .dropdown-menu .dropdown-item:hover {
+    background-color: #444 !important; /* Darker background on hover */
+    color: #BA8772 !important; /* Brown text when hovering */
+}
+
+.navbar-nav {
+    display: flex;
+    justify-content: center; /* Center items horizontally */
+    width: 100%; /* Make sure navbar takes the full width */
+}
+
+/* Style the links inside the navigation bar */
+.topNav a {
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    font-family: 'Cinzel', serif;
+}
+
+/* Change the color of links on hover */
+.topNav a:hover {
+    color: #BA8772; /* Brown color on hover */
+}
+
+/* Active link styling */
+.topNav .nav-link.active, .dropdown-item.active {
+    color: #BA8772; /* Brown color when active */
+}
+
+/* Ensure dropdown menu is positioned correctly */
+.topNav .dropdown-menu {
+    z-index: 1000; /* Ensure dropdown is above other elements */
+    background-color: #222 !important; /* Dark background for dropdown */
+    position: absolute; /* Ensure dropdown is positioned correctly */
+}
+
+/* Ensure dropdown items are styled correctly */
+.topNav .dropdown-item {
+    color: white; /* Ensuring dropdown items start as white */
+}
+
+.topNav .dropdown-item:hover {
+    color: #BA8772; /* Brown color on hover */
+}
+
+/* Center the dropdown menu on mobile view */
+@media (max-width: 768px) {
+    .topNav .dropdown-menu {
+        left: 50%;
+        transform: translateX(-50%);
+        right: auto; /* Make sure right is not influencing the position */
+    }
+}

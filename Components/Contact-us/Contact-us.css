@@ -1,0 +1,106 @@
+:root{
+    --font-color: #00000055;
+    --font-hover-color: rgb(142, 194, 132);
+}
+
+/* Background of the page */
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    transition: all .6s;
+    background-color:#e9e9e9;
+}
+/* The background for the form */
+.container {
+   width:500px;
+   box-shadow: 0 15px 35px rgba(60, 60, 93, .1), 0 5px 15px rgba(0,0,0,.07);
+    padding: 2.5em;
+    background-color: #ffffff;
+}
+
+.form-group{
+    margin-bottom: 1.5em;
+}
+
+/* Display is block so that it displays above the element we set opacity to 0 because the transition*/
+.form-label{
+    font-size: .75em;
+    color:var(--font-color);
+    display: block;
+    opacity:0.5;
+    transition: all .3s;
+    transform: translateX(-25px);
+}
+
+/* This class controls the input box's we created in html */
+.form-control{
+    box-shadow: none;
+    border-radius:0;
+    border-color:#ccc;
+    border-style:none none solid none;
+    width:100%;
+    font-size:1.25em;
+}
+
+/* If box is clicked and we are focused within this happens */
+.form-group:focus-within{
+    transform: scale(1.02,1.02);
+
+}
+
+.form-control:invalid:focus{
+    border-color: rgb(186, 41, 41);
+}
+
+.form-control:valid:focus{
+    border-color: rgb(43, 255, 0);
+}
+
+/* Place-holder text */
+.form-control::placeholder{
+    color:#aaa;
+}
+
+/* When the Form is Clicked / Selected */
+.form-control:focus{
+    box-shadow: none;
+    border-color: var(--font-hover-color);
+    outline: none;
+}
+
+.btn{
+   background: 0 0 #fff;
+   border: 1px solid #aaa;
+   border-radius: 3px;
+   color:var(--font-color);
+   font-size:1em;
+   padding:10 50px;
+   text-transform:uppercase;
+}
+
+.btn:hover{
+    border-color:var(--font-hover-color);
+    color:var(--font-hover-color);
+}
+
+textarea{
+    resize:none;
+}
+
+.focused > .form-label{
+    opacity:1;
+    transform:translateX(0px);
+    color: rgb(100, 100, 100)
+}
+
+/* Change Chrome's Background */
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active{
+    -webkit-box-shadow: 0 0 0 30px rgb(255, 255, 255) inset !important;
+    -webkit-text-fill-color: rgb(0, 0, 0) !important;
+}

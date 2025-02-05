@@ -1,0 +1,39 @@
+                                /* NavBar */
+
+/* Add a black background color to the top navigation */
+.topNav {
+    background-color: #333;
+    overflow: hidden;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+/* Style the navbar items container to be centered */
+.navbar-nav {
+    display: flex;
+    justify-content: center; /* Center items horizontally */
+    width: 100%; /* Make sure navbar takes the full width */
+}
+
+/* Style the links inside the navigation bar */
+.topNav a {
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    font-family: 'Cinzel', serif;
+}
+
+/* Change the color of links on hover */
+.topNav a:hover {
+    color: #BA8772; /* Brown color on hover */
+}
+
+/* Add a color to the active/current link */
+.topNav .nav-link.active {
+    color: #BA8772; /* Brown color when active */
+}
+
+/* End of NavBar */

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="/Components/Contact-us/Contact-us.css" media="all">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="/Components/Contact-us/Contact-us.js"></script>
+</head>
+
+<body>
+
+    <div class="container">
+        <form action="https://api.web3forms.com/submit" method="POST" class="form" autocomplete="on">
+            
+            <input type="hidden" name="access_key" value="624f92f8-4956-4341-99b9-22fc793dc4b5">
+
+            <div class="form-group">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control" id="name" name="name" 
+                    placeholder="Enter Name Here" tabindex="1" autocomplete="name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" name="email" 
+                    placeholder="youremail@outlook.com" tabindex="2" autocomplete="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="subject" class="form-label">Subject</label>
+                <input type="text" class="form-control" id="subject" name="subject" 
+                    placeholder="Please enter the topic of discussion in this box." 
+                    tabindex="3" autocomplete="off" required>
+            </div>
+
+            <div class="form-group">
+                <label for="message-textarea" class="form-label">Message</label>
+                <textarea class="form-control" id="message-textarea" name="message" 
+                    placeholder="Enter your message here" tabindex="4" autocomplete="off" required></textarea>
+            </div>
+
+            <!-- Honeypot Spam Protection -->
+            <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+            <!-- Custom Confirmation / Success Page -->
+            <!-- <input type="hidden" name="redirect" value="https://mywebsite.com/thanks.html"> -->
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+            
+        </form>
+    </div>
+
+</body>
+
+</html>

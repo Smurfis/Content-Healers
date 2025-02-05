@@ -11,9 +11,12 @@ All notable changes to this project will be documented here.
 - Imported the md files into the project README folder.
 - Created 'Contact Us' Component utility by using Web3Forms for simplicity. [200 Email(s) per month]
 - Changed file structure to have a Navbar in the component folder, moved footer into components.
+- Footer bug's fixed wouldn't apply CSS Stylesheet
+- Footer moved into main "/Home/Home.index" component
+- Added footer to all pages.
 
-### To-Do  
-- Set up GitHub Pages for deployment. [[27th Feb latest]]  
+### Launch:
+- Set up GitHub Pages for deployment. 
 
 ---
 

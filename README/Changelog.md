@@ -4,6 +4,13 @@ All notable changes to this project will be documented here.
 
 ---
 
+## [v0.85] - 2025-02-07 
+- Added "Prices", to {components} created html, css
+- Removed old index divert HTML code
+- Renamed index.html and replaced all dependency's code related to the applicable fix for deployment.
+
+---
+
 ## [v0.85] - 2025-02-05  
 
 ### Added  
@@ -14,6 +21,9 @@ All notable changes to this project will be documented here.
 - Footer bug's fixed wouldn't apply CSS Stylesheet
 - Footer moved into main "/Home/Home.index" component
 - Added footer to all pages.
+- Placed hosting on Cloudflare to email account
+- Added contact us component with email utilising Web3Forms
+- Added index.html to redirect [Todo: Change home.html to index.html]
 
 ### Launch:
 - Set up GitHub Pages for deployment. 

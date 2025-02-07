@@ -61,7 +61,7 @@ html, body {
     border-radius: 10px;
     padding: 15px;
     transition: transform 0.2s ease-in-out;
-    background-color: var(--background-secondary); /* Updated card background */
+    background-color: white; /* Updated card background */
     box-sizing: border-box; /* Ensure padding is accounted for */
     overflow: hidden; /* Prevent overflow issues */
 }

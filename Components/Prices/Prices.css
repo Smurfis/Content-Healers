@@ -1,0 +1,132 @@
+/* Custom Font for Title and Card Titles */
+.Cinzel {
+    text-decoration: none;
+    font-family: 'Cinzel', serif;
+    color: white; /* Ensuring all links start as white */
+}
+
+/* Root Variables for Consistency */
+:root {
+    /* Named Colors */
+    --brown-dark: #AD8B73; /* Used for button and main text */
+    --brown-medium: #CEAB93; /* Hover state for buttons */
+    --brown-light: #E3CAA5;
+    --cream: #FFFBE9;
+
+    /* Background Colors */
+    --background-main: #FAF7F0; /* Background color for body */
+    --background-secondary: #D8D2C2; /* Card background color */
+
+    /* Text Colors */
+    --text-primary: #AD8B73; /* Main text color */
+    --text-secondary: #CEAB93; /* Subheadings and muted text */
+
+    /* Button Colors */
+    --button-primary: #B17457; /* Main button color */
+    --button-hover: #D8D2C2; /* Hover state for buttons */
+
+    /* Borders and Dividers */
+    --border-color: #CEAB93; /* Used for dividers and outlines */
+
+    /* Accent and UI Elements */
+    --accent-highlight: #E3CAA5; /* Used for highlighted sections */
+}
+
+html, body {
+  background-color: white;
+}
+
+/* Custom Button */
+.contact-btn {
+    background-color: var(--button-primary) !important;
+    border-color: var(--button-primary) !important;
+    color: white !important;
+    width: 100%;
+    border-radius: 5px;
+}
+
+.contact-btn:hover {
+    background-color: var(--accent-highlight) !important;
+    border-color: var(--accent-highlight) !important;
+}
+
+/* Card Styles */
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    min-height: 250px; /* Set a minimum height to avoid distortion */
+    border: 1px solid var(--accent-highlight) !important;
+    border-radius: 10px;
+    padding: 15px;
+    transition: transform 0.2s ease-in-out;
+    background-color: var(--background-secondary); /* Updated card background */
+    box-sizing: border-box; /* Ensure padding is accounted for */
+    overflow: hidden; /* Prevent overflow issues */
+}
+
+/* Bullet Point List for Pricing */
+.pricing-list {
+    list-style-type: disc; /* Default bullet points */
+    color: var(--text-secondary); /* Match the secondary text color */
+    padding-left: 1.5rem; /* Adjust padding for list indent */
+    margin-top: 0; /* Remove margin from the top */
+}
+
+.pricing-list li {
+    margin-bottom: 0.5rem; /* Add spacing between list items */
+}
+
+/* Hover Effect on Cards */
+.card:hover {
+    transform: scale(1.03);
+}
+
+/* Typography */
+h2, .card-title {
+    font-family: 'Cinzel', serif; /* Applying Cinzel font to titles */
+    font-size: 2rem;
+    color: var(--accent-highlight) !important;/* Main text color */
+}
+
+.card-text {
+    color: var(--highlight-color); /* Secondary text color */
+}
+
+.card p {
+    color: var(--text-secondary); /* Secondary text for paragraphs */
+}
+
+/* Responsive Typography */
+@media (max-width: 576px) {
+    h2, .card-title {
+        font-size: 1.5rem;
+    }
+}
+
+/* Section and Background Colors */
+.container {
+    background-color: white; /* Main background set to white */
+    padding: 2rem 0;
+}
+
+.row.g-4 {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: white; /* Removed cream, set section background to white */
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+/* Borders & Dividers */
+hr {
+    border-color: var(--accent-highlight); /* Divider color */
+}
+
+/* Accents & Highlights */
+.cta-section {
+    background-color: white; /* Call to action section background */
+    padding: 1.5rem;
+    border-radius: 10px;
+}

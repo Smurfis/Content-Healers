@@ -90,7 +90,6 @@
 @media (max-width: 768px) {
     .topNav .dropdown-menu {
         left: 50%;
-        transform: translateX(-50%);
         right: auto; /* Make sure right is not influencing the position */
     }
 }

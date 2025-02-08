@@ -9,7 +9,12 @@
   h1 {
     font-family: "Cinzel", serif;
   }
-  
+
+  p {
+    line-height: 1.5rem;
+    font-size: 1.15rem;
+  }
+
   body {
     background-color: #FFF8F2;
     color: #373539;
@@ -63,7 +68,7 @@
   
   /* OPTIONAL HOVER STATE */
   .faq-drawer__title:hover { 
-    color: #4E4B52;
+    color: #BA8772;
   }
   
   .faq-drawer__trigger:checked

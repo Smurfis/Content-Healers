@@ -2,13 +2,17 @@
 .footer {
     background-color: white !important;
     color: white !important;
-    padding: 40px 0 !important;
     text-align: center !important;
     width: 100%;  /* Ensure footer takes full width */
 }
 
 .footer-container {
-    max-width: 1200px;
+    padding: 0px;
+    margin-top: none;
+}
+
+.footer-container {
+    max-width: 100%;
     margin: 0 auto !important;
     width: 100% !important; /* Ensure container takes full width */
 }

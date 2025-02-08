@@ -1,7 +1,104 @@
-.Logo {
-    width: 150px;
-    height: 150px;
+/* Apply Cinzel font to the H1 element */
+.cinzel-h1 {
+    font-family: "Cinzel", serif;
+    font-optical-sizing: auto;
+    font-weight: 700; /* Choose the weight (400 or 700 as needed) */
+    font-style: normal;
+  }
+  
+  h1 {
+    font-family: "Cinzel", serif;
+  }
+  
+  body {
+    background-color: #FFF8F2;
+    color: #373539;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  .container {
+    padding: 50px;
+  }
+  
+  .faq-drawer {
+    margin-bottom: 30px;
+  }
+  
+  .faq-drawer__content-wrapper {
+    font-size: 1.25em;
+    line-height: 1.4em;
+    max-height: 0px;
+    overflow: hidden;
+    transition: 0.25s ease-in-out;
+  }
+  
+  .faq-drawer__title {
+    border-bottom: #000 1px solid;
+    cursor: pointer;
     display: block;
-    margin: 0 auto;
-}
-
+    font-size: 1.25em;
+    font-weight: 700;
+    padding: 30px 0 0 0;
+    position: relative;
+    margin-bottom: 0;
+    transition: all 0.25s ease-out;
+  }
+  
+  .faq-drawer__title::after {
+    border-style: solid;
+    border-width: 1px 1px 0 0;
+    content: " ";
+    display: inline-block;
+    float: right;
+    height: 10px;
+    left: 2px;
+    position: relative;
+    right: 20px;
+    top: 2px;
+    transform: rotate(135deg);
+    transition: 0.35s ease-in-out;
+    vertical-align: top;
+    width: 10px;
+  }
+  
+  /* OPTIONAL HOVER STATE */
+  .faq-drawer__title:hover { 
+    color: #4E4B52;
+  }
+  
+  .faq-drawer__trigger:checked
+    + .faq-drawer__title
+    + .faq-drawer__content-wrapper {
+    max-height: 350px;
+  }
+  
+  .faq-drawer__trigger:checked + .faq-drawer__title::after {
+    transform: rotate(-45deg);
+    transition: 0.25s ease-in-out;
+  }
+  
+  input[type="checkbox"] {
+    display: none;
+  }
+  
+  /* Default max-height for all FAQ drawers */
+  .faq-drawer__trigger:checked
+    + .faq-drawer__title
+    + .faq-drawer__content-wrapper {
+    max-height: 800px;
+  }
+  
+  /* Custom max-height for the last FAQ drawer */
+  .faq-drawer:last-child .faq-drawer__trigger:checked
+    + .faq-drawer__title
+    + .faq-drawer__content-wrapper {
+    max-height: 1000px; /* Adjust this as needed */
+  }
+  
+  
+  @media only screen and (max-width: 600px) {
+    .container {
+      padding: 80px;
+    }
+  }
+  

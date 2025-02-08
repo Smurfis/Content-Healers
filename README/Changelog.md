@@ -12,6 +12,7 @@ All notable changes to this project will be documented here.
 - Corrected contact form positioning and css
 - Changed correct colour pallete for multiple buttons across pages 'Contact us' included was blue
 - Corrected javascript in contact-us
+- Implemented 'About Reiki' page and css.
 ---
 
 ## [v0.85] - 2025-02-07 

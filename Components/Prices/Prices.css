@@ -107,6 +107,8 @@ h2, .card-title {
 
 /* Section and Background Colors */
 .container {
+    margin-top: 0px;
+    padding-top: 0px;
     background-color: white; /* Main background set to white */
     padding: 2rem 0;
 }

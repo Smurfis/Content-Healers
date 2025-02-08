@@ -9,6 +9,7 @@ All notable changes to this project will be documented here.
 - Removed old index divert HTML code
 - Renamed index.html and replaced all dependency's code related to the applicable fix for deployment.
 - New commit to fix Navbar issues with viewport sizing alignment, implemented "Prices" component to "Prices" page 
+- Integrated Contact-Us Page and component created page for Contact-us
 
 ---
 

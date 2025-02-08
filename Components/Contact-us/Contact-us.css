@@ -1,10 +1,19 @@
-:root{
+:root {
     --font-color: #00000055;
     --font-hover-color: rgb(142, 194, 132);
+    /* Button Colors */
+    --button-primary: #B17457;
+    --button-hover: #E3CAA5;
+    /* Named Colors */
+    --brown-dark: #AD8B73;
+    --brown-medium: #CEAB93;
+    --brown-light: #E3CAA5;
+    --cream: #FFFBE9;
+    
 }
 
 /* Background of the page */
-body{
+body {
     display: inline;
     justify-content: center;
     align-items: center;
@@ -13,10 +22,11 @@ body{
     transition: all .6s;
     background-color:#e9e9e9;
 }
+
 /* The background for the form */
 .contact-container {
     width: 100%;
-    box-shadow: 0 15px 35px rgba(60, 60, 93, .1), 0 5px 15px rgba(0,0,0,.07);
+/*     box-shadow: 0 15px 35px rgba(60, 60, 93, .1), 0 5px 15px rgba(0,0,0,.07); */
     padding: 2.5em;
     background-color: #ffffff;
 }
@@ -70,19 +80,20 @@ body{
     outline: none;
 }
 
-.btn{
-   background: 0 0 #fff;
-   border: 1px solid #aaa;
-   border-radius: 3px;
-   color:var(--font-color);
-   font-size:1em;
-   padding:10 50px;
-   text-transform:uppercase;
+.btn { 
+    border-color: var(--brown-light) !important;
+    border-radius: 3px;
+    color: white !important;
+    background-color: var(--button-primary) !important;
+    font-size: 1em;
+    padding: 10 50px;
+    text-transform: uppercase;
 }
 
-.btn:hover{
-    border-color:var(--font-hover-color);
-    color:var(--font-hover-color);
+.btn:hover {
+    border-color: var(--brown-light) !important;
+    background-color: var(--button-hover) !important;
+    color: var(--cream) !important;
 }
 
 textarea{

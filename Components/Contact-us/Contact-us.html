@@ -1,19 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us</title>
     <link rel="stylesheet" href="/Components/Contact-us/Contact-us.css" media="all">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="/Components/Contact-us/Contact-us.js"></script>
+    <script src="/Components/Contact-us/Contact-us.js" defer></script>
 </head>
 
 <body>
-
     <div class="contact-container">
-        <form action="https://api.web3forms.com/submit" method="POST" class="form" autocomplete="on">
+        <form action="https://api.web3forms.com/submit" method="POST" class="form" autocomplete="on" onsubmit="return validateEmail(event)">
             
             <input type="hidden" name="access_key" value="624f92f8-4956-4341-99b9-22fc793dc4b5">
 
@@ -26,7 +23,9 @@
             <div class="form-group">
                 <label for="email" class="form-label">Email</label>
                 <input type="email" class="form-control" id="email" name="email" 
-                    placeholder="youremail@outlook.com" tabindex="2" autocomplete="email" required>
+                    placeholder="youremail@outlook.com" tabindex="2" autocomplete="email" required 
+                    oninput="validateEmail()">
+                <small id="email-error" class="error-message" style="color: red; display: none;"></small>
             </div>
 
             <div class="form-group">
@@ -53,6 +52,55 @@
         </form>
     </div>
 
-</body>
+    <script>
+        function simpleEmailValidation(email) {
+            return /\S+@\S+\.\S+/.test(email);
+        }
+        
+        function strictEmailValidation(email) {
+            return /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(email);
+        }
+        
+        function isDisposableEmail(email) {
+            const disposableDomains = new Set([
+                "mailinator.com", "guerrillamail.com", "10minutemail.com", 
+                "yopmail.com", "tempmail.com", "trashmail.com", "fakeinbox.com",
+                "emailondeck.com", "spambog.com", "sharklasers.com", "getnada.com",
+                "maildrop.cc", "discard.email", "mohmal.com", "mailnesia.com"
+            ]);
+            const domain = email.split('@')[1];
+            return disposableDomains.has(domain);
+        }
+        
+        function validateEmail(event) {
+            const emailInput = document.getElementById("email");
+            const email = emailInput.value;
+            const errorMessage = document.getElementById("email-error");
 
+            if (!simpleEmailValidation(email)) {
+                errorMessage.textContent = "Invalid email format.";
+                errorMessage.style.display = "block";
+                if (event) event.preventDefault(); // Stop form submission
+                return false;
+            }
+
+            if (!strictEmailValidation(email)) {
+                errorMessage.textContent = "Email does not match strict validation rules.";
+                errorMessage.style.display = "block";
+                if (event) event.preventDefault();
+                return false;
+            }
+
+            if (isDisposableEmail(email)) {
+                errorMessage.textContent = "Disposable email addresses are not allowed.";
+                errorMessage.style.display = "block";
+                if (event) event.preventDefault();
+                return false;
+            }
+
+            errorMessage.style.display = "none"; // Hide error message if valid
+            return true; // Allow form submission
+        }
+    </script>
+</body>
 </html>

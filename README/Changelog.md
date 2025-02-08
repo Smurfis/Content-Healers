@@ -5,6 +5,16 @@ All notable changes to this project will be documented here.
 ---
 
 ## [v0.85] - 2025-02-07 
+- Corrected various re-sizing and scaling issues
+- Implemented Error 404 page and handling for it.
+- Fixed spacing issue related to Prices h2
+- Fixed prices page js not loading customized for this specific page
+- Corrected contact form positioning and css
+- Changed correct colour pallete for multiple buttons across pages 'Contact us' included was blue
+- Corrected javascript in contact-us
+---
+
+## [v0.85] - 2025-02-07 
 - Added "Prices", to {components} created html, css
 - Removed old index divert HTML code
 - Renamed index.html and replaced all dependency's code related to the applicable fix for deployment.

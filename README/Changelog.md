@@ -4,15 +4,20 @@ All notable changes to this project will be documented here.
 
 ---
 
+## [v0.85] - 2025-02-08
+- Corrected contact form positioning and css
+- Changed correct colour pallete for multiple buttons across pages 'Contact us' included was blue
+- Corrected javascript in contact-us
+- Implemented 'About Reiki' page and css.
+- Implemented Logo icon for top of tab.
+
+---
+
 ## [v0.85] - 2025-02-07 
 - Corrected various re-sizing and scaling issues
 - Implemented Error 404 page and handling for it.
 - Fixed spacing issue related to Prices h2
 - Fixed prices page js not loading customized for this specific page
-- Corrected contact form positioning and css
-- Changed correct colour pallete for multiple buttons across pages 'Contact us' included was blue
-- Corrected javascript in contact-us
-- Implemented 'About Reiki' page and css.
 ---
 
 ## [v0.85] - 2025-02-07 

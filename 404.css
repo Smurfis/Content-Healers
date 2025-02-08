@@ -1,56 +1,98 @@
 :root {
     /* Button Colors */
-    --button-primary: #B17457; /* Main button color */
-    --button-hover: #D8D2C2; /* Hover state for buttons */
+    --button-primary: #B17457;
+    --button-hover: #D8D2C2;
     /* Named Colors */
-    --brown-dark: #AD8B73; /* Used for button and main text */
-    --brown-medium: #CEAB93; /* Hover state for buttons */
+    --brown-dark: #AD8B73;
+    --brown-medium: #CEAB93;
     --brown-light: #E3CAA5;
     --cream: #FFFBE9;
 }
 
-/* Custom Font for Title and Card Titles */
-.Cinzel {
-    text-decoration: none;
-    font-family: 'Cinzel', serif;
-    color: white; /* Ensuring all links start as white */
+html {
+    font-size: 16px; /* Base font size for rem calculations */
 }
 
 body {
     text-align: center;
     font-family: Arial, sans-serif;
-    margin: 50px;
+    margin: 3rem;
+    padding: 0;
 }
+
 h1 {
     font-family: 'Cinzel', serif;
     font-size: 3rem;
-    color: #333;
-    color: var(--brown-medium) !important;/* Main text color */
+    color: var(--brown-medium);
+    margin-bottom: 1rem;
 }
+
 p {
     font-size: 1.2rem;
-    color: var(--brown-dark); /* Main text color */
+    color: var(--brown-dark);
 }
+
 a {
     display: inline-block;
-    padding: 10px 20px;
-    margin-top: 20px;
+    padding: 0.625rem 1.25rem; /* 10px 20px converted to rem */
+    margin-top: 1.25rem; /* 20px converted to rem */
     text-decoration: none;
     background-color: var(--button-primary);
     color: white;
-    border-radius: 5px;
+    border-radius: 0.3125rem; /* 5px converted to rem */
+    font-size: 1rem;
 }
+
 a:hover {
     background-color: var(--button-hover);
 }
 
 .centered-container {
-    padding-top: 5%;
+    padding-top: 15vh; /* Using viewport height for better scaling */
 }
 
 .Logo {
     width: 150px;
     height: 150px;
-    display: block;
+    display: inline;
     margin: 0 auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    html {
+        font-size: 14px;
+    }
+    body {
+        margin: 2rem;
+    }
+    h1 {
+        font-size: 2.5rem;
+    }
+    p {
+        font-size: 1rem;
+    }
+    .Logo {
+        width: 7.5rem;
+        height: 7.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    html {
+        font-size: 12px;
+    }
+    body {
+        margin: 1.5rem;
+    }
+    h1 {
+        font-size: 2rem;
+    }
+    p {
+        font-size: 0.9rem;
+    }
+    .Logo {
+        width: 6rem;
+        height: 6rem;
+    }
 }

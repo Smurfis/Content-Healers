@@ -1,0 +1,56 @@
+:root {
+    /* Button Colors */
+    --button-primary: #B17457; /* Main button color */
+    --button-hover: #D8D2C2; /* Hover state for buttons */
+    /* Named Colors */
+    --brown-dark: #AD8B73; /* Used for button and main text */
+    --brown-medium: #CEAB93; /* Hover state for buttons */
+    --brown-light: #E3CAA5;
+    --cream: #FFFBE9;
+}
+
+/* Custom Font for Title and Card Titles */
+.Cinzel {
+    text-decoration: none;
+    font-family: 'Cinzel', serif;
+    color: white; /* Ensuring all links start as white */
+}
+
+body {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    margin: 50px;
+}
+h1 {
+    font-family: 'Cinzel', serif;
+    font-size: 3rem;
+    color: #333;
+    color: var(--brown-medium) !important;/* Main text color */
+}
+p {
+    font-size: 1.2rem;
+    color: var(--brown-dark); /* Main text color */
+}
+a {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    text-decoration: none;
+    background-color: var(--button-primary);
+    color: white;
+    border-radius: 5px;
+}
+a:hover {
+    background-color: var(--button-hover);
+}
+
+.centered-container {
+    padding-top: 5%;
+}
+
+.Logo {
+    width: 150px;
+    height: 150px;
+    display: block;
+    margin: 0 auto;
+}

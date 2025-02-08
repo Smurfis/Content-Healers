@@ -2,109 +2,87 @@
 <html lang="en-GB">
 <head>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
-
-
-    <!-- Character Encoding -->
     <meta charset="UTF-8">
-    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    
-    <!-- Custom CSS -->
     <link rel="stylesheet" href="Prices.css">
-    
-    <!-- Meta Information -->
     <meta name="author" content="❤ Content Healers ❤">
     <meta name="generator" content="Copyright of Content Healers">
-    <!--Viewport-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">    
-    <!-- Page Title -->
     <title>❤ Content Healers ❤</title>
 
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-            // Load navbar HTML
-            fetch('/Components/Navbar/navbar.html')
-                .then(response => response.text())
-                .then(data => {
-                    document.body.insertAdjacentHTML('afterbegin', data);
+            // Load all component CSS files first
+            const cssFiles = [
+                '/Components/Navbar/navbar.css',
+                '/Components/Prices/Prices.css',
+                '/Components/Footer/Footer.css'
+            ];
+            
+            // Load CSS files
+            cssFiles.forEach(file => {
+                const link = document.createElement('link');
+                link.rel = 'stylesheet';
+                link.href = file;
+                document.head.appendChild(link);
+            });
 
-                    // Set active class based on current URL
-                    const currentPath = window.location.pathname;
-                    const navLinks = document.querySelectorAll('.nav-link');
-                    navLinks.forEach(link => {
-                        if (link.getAttribute('href') === currentPath) {
-                            link.classList.add('active');
-                        }
-                    });
-                });
+            // Function to fetch and insert component
+            async function loadComponent(url, targetSelector, position = 'beforeend') {
+                try {
+                    const response = await fetch(url);
+                    const html = await response.text();
+                    document.body.insertAdjacentHTML(position, html);
+                    
+                    // Add any post-loading logic
+                    if (url.includes('navbar')) {
+                        const currentPath = window.location.pathname;
+                        const navLinks = document.querySelectorAll('.nav-link');
+                        navLinks.forEach(link => {
+                            if (link.getAttribute('href') === currentPath) {
+                                link.classList.add('active');
+                            }
+                        });
+                    }
+                } catch (error) {
+                    console.error(`Error loading component from ${url}:`, error);
+                }
+            }
 
-            // Load navbar CSS
-            const link = document.createElement('link');
-            link.rel = 'stylesheet';
-            link.href = '/Components/Navbar/navbar.css';
-            document.head.appendChild(link);
+            // Load components in sequence
+            async function loadAllComponents() {
+                // Create logo div
+                const logoDiv = document.createElement('div');
+                logoDiv.className = 'Logo';
+                const logoImg = document.createElement('img');
+                logoImg.className = 'Logo';
+                logoImg.src = '/images/Logo.png';
+                logoImg.alt = 'Content Healers Logo';
+                logoDiv.appendChild(logoImg);
+                document.body.appendChild(logoDiv);
+
+                // Load components in specific order
+                await loadComponent('/Components/Navbar/navbar.html', 'body', 'afterbegin');
+                await loadComponent('/Components/Prices/Prices.html', '.Prices_Info');
+                await loadComponent('/Components/Footer/Footer.html', 'body');
+
+                // Make components visible after everything is loaded
+                document.querySelector('.Prices_Info').style.display = 'block';
+                document.querySelector('.footer').style.display = 'block';
+            }
+
+            // Start loading sequence
+            loadAllComponents().catch(error => {
+                console.error('Error in loading sequence:', error);
+            });
         });
     </script>
 </head>
 <body>
-    <!-- Logo -->
-    <div class="Logo">
-    <img class="Logo" src="/images/Logo.png" alt="Content Healers Logo">
-    </div>
-
-        <!-- Prices Info -->
-        <div class="Prices_Info">
-            <script>
-                document.addEventListener("DOMContentLoaded", function() {
-                    // Load Prices HTML
-                    fetch('/Components/Prices/Prices.html')
-                        .then(response => response.text())
-                        .then(data => {
-                            document.body.insertAdjacentHTML('beforeend', data);
+    <div class="Prices_Info"></div>
     
-                            // Wait for a moment before applying styles or reflow
-                            setTimeout(() => {
-                                // Manually trigger layout update or adjust styles
-                                document.querySelector('.footer').style.display = 'block';
-                            }, 100); // Delay 100ms to ensure proper reflow
-                        });
-    
-                    // Load Prices CSS
-                    const PricesLink = document.createElement('link');
-                    PricesLink.rel = 'stylesheet';
-                    PricesLink.href = '/Components/Prices/Prices.css';
-                    document.head.appendChild(PricesLink);
-                });
-            </script>
-        </div>
-        
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    
-    <!-- Custom JavaScript -->
     <script src="Prices.js"></script>
-    <!-- Footer -->
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-        // Load footer HTML
-        fetch('/Components/Footer/Footer.html')
-            .then(response => response.text())
-            .then(data => {
-                document.body.insertAdjacentHTML('beforeend', data);
-    
-                // Wait for a moment before applying styles or reflow
-                setTimeout(() => {
-                    // Manually trigger layout update or adjust styles
-                    document.querySelector('.footer').style.display = 'block';
-                }, 100); // Delay 100ms to ensure proper reflow
-            });
-    
-        // Load footer CSS
-        const Footerlink = document.createElement('link');
-        Footerlink.rel = 'stylesheet';
-        Footerlink.href = '/Components/Footer/Footer.css';
-        document.head.appendChild(Footerlink);
-        });
-        </script>
 </body>
 </html>
